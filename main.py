@@ -1,4 +1,4 @@
-import azure.functions as func
+#import azure.functions as func
 
 def main():
     # Get the query string parameters
