@@ -1,6 +1,6 @@
 import azure.functions as func
 
-def main(req: func.HttpRequest) -> func.HttpResponse:
+def main():
     # Get the query string parameters
     num1 = req.params.get('num1')
     num2 = req.params.get('num2')
@@ -20,10 +20,10 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     elif operation == 'subtract':
         result = num1 - num2
     else:
-        return func.HttpResponse(
+        return (
             "Invalid operation! Please specify a valid operation: add, multiply, divide, or subtract",
             status_code=400
         )
 
     # Return the result as a string
-    return func.HttpResponse("Result: " + str(result))
+    return ("Result: " + str(result))
