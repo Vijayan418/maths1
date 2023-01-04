@@ -3,7 +3,7 @@ import azure.functions as func
 def main(req: func.HttpRequest) -> func.HttpResponse:
     # Get the query string parameters
     num1 = req.params.get('num1')
-    num2 = req.params.get('num2')
+    num2 = req.params.get('num3')
     operation = req.params.get('operation')
 
     # Convert the query string parameters to integers
